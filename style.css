@@ -43,6 +43,10 @@ h6 {
 	overflow-wrap: break-word;
 }
 
+a {
+	text-decoration: none;
+}
+
 :root {
 	--bg-color: #fff8f1;
 
@@ -71,4 +75,50 @@ footer {
 
 footer a {
 	color: var(--gray);
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-inline: 3rem;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding-block: 1rem;
+}
+
+.logo {
+	background-color: var(--primary-col);
+	color: var(--white);
+
+	width: 50px;
+	height: 50px;
+
+	display: grid;
+	place-items: center;
+}
+
+.logo h1 {
+	font-size: 2.2rem;
+	font-weight: 400;
+}
+
+.cta-btn {
+	background-color: var(--primary-col);
+	color: var(--white);
+
+	padding: 0.8rem 2rem;
+	border-radius: 100vh;
+	font-weight: 600;
+
+	transition: all 250ms;
+}
+
+.cta-btn:hover {
+	background-color: var(--secondary-col);
 }
