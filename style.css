@@ -68,6 +68,11 @@ body {
 	font-family: 'Lato', sans-serif;
 }
 
+p {
+	color: var(--gray);
+	font-weight: 600;
+}
+
 footer {
 	text-align: center;
 	padding-block: 1rem;
@@ -75,8 +80,14 @@ footer {
 	color: var(--white);
 }
 
+footer p {
+	color: var(--white);
+	font-weight: initial;
+}
+
 footer a {
 	color: var(--gray);
+	font-weight: 600;
 }
 
 .container {
@@ -119,7 +130,7 @@ nav {
 }
 
 .cta-btn {
-	padding: 0.8rem 2rem;
+	padding: 0.8rem 3rem;
 	border-radius: 100vh;
 	font-weight: 600;
 
@@ -165,9 +176,10 @@ section.hero-text h2 {
 
 section.hero-text p {
 	padding-inline: 3rem;
+}
 
-	color: var(--gray);
-	font-weight: 600;
+section.services {
+	margin-bottom: 8rem;
 }
 
 section.services ul {
@@ -225,12 +237,6 @@ section.services img {
 	object-fit: cover;
 
 	margin-left: auto;
-	color: blue !important;
-}
-
-svg {
-	color: blue !important;
-	fill: red !important;
 }
 
 section.services a {
@@ -239,4 +245,36 @@ section.services a {
 	color: var(--white);
 	font-size: 1.2rem;
 	font-weight: 600;
+}
+
+section.testimonial {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	gap: 8rem;
+}
+
+section.testimonial img {
+	width: 420px;
+	aspect-ratio: 1/1;
+	object-position: top;
+
+	border-radius: 100%;
+}
+
+section.testimonial article {
+	display: flex;
+	align-items: start;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+section.testimonial article h2 {
+	font-size: 2.4rem;
+	text-wrap: balance;
+}
+
+section.testimonial article p {
+	width: 80%;
 }
