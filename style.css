@@ -55,6 +55,8 @@ a {
 
 	--white: #fffdf4;
 	--gray: #918881;
+
+	--border-radius: 8px;
 }
 
 body {
@@ -84,6 +86,14 @@ footer a {
 	padding-inline: 3rem;
 }
 
+ul {
+	list-style: none;
+}
+
+header {
+	margin-bottom: 4rem;
+}
+
 nav {
 	display: flex;
 	justify-content: space-between;
@@ -109,9 +119,6 @@ nav {
 }
 
 .cta-btn {
-	background-color: var(--primary-col);
-	color: var(--white);
-
 	padding: 0.8rem 2rem;
 	border-radius: 100vh;
 	font-weight: 600;
@@ -119,6 +126,117 @@ nav {
 	transition: all 250ms;
 }
 
-.cta-btn:hover {
+.cta-btn[primary] {
+	background-color: var(--primary-col);
+	color: var(--white);
+}
+
+.cta-btn[primary] {
+	background-color: var(--primary-col);
+	color: var(--white);
+}
+
+.cta-btn[primary]:hover {
 	background-color: var(--secondary-col);
+}
+
+.cta-btn[secondary] {
+	background-color: var(--secondary-col);
+	color: var(--white);
+}
+
+.cta-btn[secondary]:hover {
+	background-color: var(--primary-col);
+}
+
+main section {
+	margin-bottom: 4rem;
+}
+
+section.hero-text {
+	text-align: center;
+
+	padding-inline: 13rem;
+}
+
+section.hero-text h2 {
+	font-size: 3.5rem;
+}
+
+section.hero-text p {
+	padding-inline: 3rem;
+
+	color: var(--gray);
+	font-weight: 600;
+}
+
+section.services ul {
+	min-height: 380px;
+
+	display: grid;
+	grid-template-areas:
+		'design ui apps photo'
+		'design ill ill graphics';
+	gap: 1rem;
+}
+
+section.services .graphic-design {
+	grid-area: design;
+	background-color: #755cde;
+}
+
+section.services .ui-ux {
+	grid-area: ui;
+	background-color: #f6a460;
+}
+
+section.services .apps {
+	grid-area: apps;
+	background-color: #f39d9e;
+}
+
+section.services .photography {
+	grid-area: photo;
+	background-color: #55214a;
+}
+
+section.services .illustrations {
+	grid-area: ill;
+	background-color: #ea7564;
+}
+
+section.services .motion-graphics {
+	grid-area: graphics;
+	background-color: #61c4b7;
+}
+
+section.services li {
+	display: grid;
+	grid-template-rows: 1fr auto;
+
+	padding: 0.5rem 1rem;
+	border-radius: var(--border-radius);
+
+	overflow: hidden;
+}
+
+section.services img {
+	height: 120px;
+	object-fit: cover;
+
+	margin-left: auto;
+	color: blue !important;
+}
+
+svg {
+	color: blue !important;
+	fill: red !important;
+}
+
+section.services a {
+	order: 1;
+
+	color: var(--white);
+	font-size: 1.2rem;
+	font-weight: 600;
 }
