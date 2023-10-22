@@ -50,7 +50,7 @@ a {
 :root {
 	--bg-color: #fff8f1;
 
-	--primary-col: #030303;
+	--primary-col: #120808;
 	--secondary-col: #ea7564;
 
 	--white: #fffdf4;
@@ -86,7 +86,7 @@ footer p {
 }
 
 footer a {
-	color: var(--gray);
+	color: var(--secondary-col);
 	font-weight: 600;
 }
 
@@ -102,7 +102,7 @@ ul {
 }
 
 header {
-	margin-bottom: 4rem;
+	margin-bottom: 2rem;
 }
 
 nav {
@@ -130,9 +130,12 @@ nav {
 }
 
 .cta-btn {
-	padding: 0.8rem 3rem;
-	border-radius: 100vh;
 	font-weight: 600;
+
+	padding: 0.8rem 3rem;
+
+	border: 2px solid;
+	border-radius: 100vh;
 
 	transition: all 250ms;
 }
@@ -256,7 +259,7 @@ section.testimonial {
 }
 
 section.testimonial img {
-	width: 420px;
+	width: 460px;
 	aspect-ratio: 1/1;
 	object-position: top;
 
@@ -277,4 +280,35 @@ section.testimonial article h2 {
 
 section.testimonial article p {
 	width: 80%;
+}
+
+/* TODO: Carousel styles */
+
+section.book-call {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 18rem;
+	align-items: center;
+
+	background-color: var(--primary-col);
+	color: var(--white);
+
+	padding: 5rem 4rem;
+	margin-bottom: 3rem;
+
+	border-radius: var(--border-radius);
+}
+
+section.book-call h2 {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+section.book-call p {
+	color: var(--white);
+	font-weight: 400;
+}
+
+section.book-call a {
+	border: 2px solid var(--secondary-col);
 }
