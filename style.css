@@ -73,6 +73,15 @@ p {
 	font-weight: 600;
 }
 
+button {
+	cursor: pointer;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
 footer {
 	text-align: center;
 	padding-block: 1rem;
@@ -95,10 +104,6 @@ footer a {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding-inline: 3rem;
-}
-
-ul {
-	list-style: none;
 }
 
 header {
@@ -323,7 +328,8 @@ section.book-call a {
 	}
 }
 
-@media screen and (max-width: 768px) {
+/* Tablet */
+@media screen and (max-width: 800px) {
 	.container {
 		padding-inline: 2rem;
 	}
@@ -391,6 +397,7 @@ section.book-call a {
 	}
 }
 
+/* Mobile */
 @media screen and (max-width: 650px) {
 	/* Hero */
 	section.hero-text h2 {
@@ -435,6 +442,7 @@ section.book-call a {
 	}
 }
 
+/* Mobile Mini */
 @media screen and (max-width: 450px) {
 	.container {
 		padding-inline: 1rem;
