@@ -99,11 +99,19 @@ footer a {
 	font-weight: 600;
 }
 
+.text-center {
+	text-align: center;
+}
+
 .container {
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1280px;
 	margin: 0 auto;
 	padding-inline: 3rem;
+}
+
+h3 {
+	font-size: 2rem;
 }
 
 header {
@@ -166,6 +174,69 @@ nav {
 
 .cta-btn[secondary]:hover {
 	background-color: var(--primary-col);
+}
+
+.carousel {
+	--num-items: 3;
+	--item-w: 700px;
+	--gap: 1.5rem;
+
+	--items-w: calc(var(--item-w) * var(--num-items));
+	--gaps-w: calc(var(--gap) * (var(--num-items) - 1));
+	--width: calc(var(--items-w) + var(--gaps-w));
+
+	margin-top: 1rem;
+	margin-bottom: 4rem;
+
+	width: 100dvw;
+	overflow-x: hidden;
+}
+
+.carousel ol {
+	--offset: calc(var(--width) - 100dvw);
+
+	width: var(--width);
+	transform: translateX(calc(var(--offset) / -2));
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
+
+	margin-bottom: 1rem;
+}
+
+.carousel img {
+	width: var(--item-w);
+	aspect-ratio: 16/9;
+
+	border-radius: var(--border-radius);
+}
+
+.carousel .controls {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.carousel .controls button {
+	background-color: var(--primary-col);
+	color: var(--white);
+
+	border: 1px solid var(--primary-col);
+	border-radius: 100%;
+
+	width: 40px;
+	aspect-ratio: 1 / 1;
+
+	font-size: 1.5rem;
+
+	transition: all 250ms;
+}
+
+.carousel .controls button:hover {
+	background-color: var(--gray);
+	border-color: var(--gray);
 }
 
 main section {
@@ -290,8 +361,6 @@ section.testimonial article p {
 	width: 80%;
 }
 
-/* TODO: Carousel styles */
-
 /* Book Call */
 section.book-call {
 	display: grid;
@@ -323,8 +392,16 @@ section.book-call a {
 }
 
 @media screen and (max-width: 1200px) {
+	.carousel {
+		--item-w: 500px;
+	}
+
 	section.hero-text {
 		padding-inline: 0;
+	}
+
+	section.book-call {
+		gap: 8rem;
 	}
 }
 
@@ -399,6 +476,10 @@ section.book-call a {
 
 /* Mobile */
 @media screen and (max-width: 650px) {
+	.carousel {
+		--item-w: 380px;
+	}
+
 	/* Hero */
 	section.hero-text h2 {
 		font-size: 3rem;
@@ -446,6 +527,10 @@ section.book-call a {
 @media screen and (max-width: 450px) {
 	.container {
 		padding-inline: 1rem;
+	}
+
+	.carousel {
+		--item-w: 280px;
 	}
 
 	/* Services */
