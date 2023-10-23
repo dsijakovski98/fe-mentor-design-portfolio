@@ -10,7 +10,7 @@
 }
 
 body {
-	line-height: 1.5;
+	line-height: 1.4;
 	-webkit-font-smoothing: antialiased;
 
 	font-family: 'Josefin Sans', sans-serif;
@@ -167,6 +167,7 @@ main section {
 	margin-bottom: 4rem;
 }
 
+/* Hero */
 section.hero-text {
 	text-align: center;
 
@@ -181,6 +182,7 @@ section.hero-text p {
 	padding-inline: 3rem;
 }
 
+/* Services */
 section.services {
 	margin-bottom: 8rem;
 }
@@ -250,6 +252,7 @@ section.services a {
 	font-weight: 600;
 }
 
+/* Testimonial */
 section.testimonial {
 	display: flex;
 	align-items: center;
@@ -284,6 +287,7 @@ section.testimonial article p {
 
 /* TODO: Carousel styles */
 
+/* Book Call */
 section.book-call {
 	display: grid;
 	grid-template-columns: 1fr auto;
@@ -311,4 +315,142 @@ section.book-call p {
 
 section.book-call a {
 	border: 2px solid var(--secondary-col);
+}
+
+@media screen and (max-width: 1200px) {
+	section.hero-text {
+		padding-inline: 0;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		padding-inline: 2rem;
+	}
+
+	html {
+		font-size: 15px;
+	}
+
+	/* Services */
+	section.services {
+		margin-bottom: 6rem;
+	}
+
+	section.services ul {
+		grid-template-areas:
+			'design ui apps'
+			'design ill ill'
+			'photo graphics graphics';
+	}
+
+	section.services li {
+		gap: 1rem;
+	}
+
+	section.services li img {
+		height: 100px;
+	}
+
+	/* Testimonial */
+	section.testimonial {
+		gap: 4rem;
+	}
+
+	section.testimonial img {
+		width: 300px;
+	}
+
+	section.testimonial article {
+		gap: 1rem;
+	}
+
+	section.testimonial article h2 {
+		font-size: 1.8rem;
+		text-wrap: unset;
+	}
+
+	section.testimonial article p {
+		width: 100%;
+	}
+
+	/* Book Call */
+	section.book-call {
+		grid-template-rows: 1fr auto;
+		grid-template-columns: unset;
+		gap: 2rem;
+
+		place-items: center;
+		text-align: center;
+
+		padding: 3rem 6rem;
+	}
+
+	section.book-call br {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	/* Hero */
+	section.hero-text h2 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	/* Services */
+	section.services ul {
+		grid-template-areas:
+			'design design'
+			'ui apps'
+			'ill ill'
+			'photo photo'
+			'graphics graphics';
+	}
+
+	/* Testimonial */
+	section.testimonial {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	section.testimonial img {
+		width: 90%;
+	}
+
+	section.testimonial article {
+		text-align: center;
+
+		align-items: center;
+		gap: 1.5rem;
+	}
+
+	section.testimonial article h2 {
+		font-size: 2rem;
+	}
+
+	/* Book Call */
+	section.book-call {
+		padding-inline: 2rem;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.container {
+		padding-inline: 1rem;
+	}
+
+	/* Services */
+	section.services li img {
+		height: 80px;
+	}
+
+	/* Book Call */
+	section.book-call {
+		padding-inline: 1rem;
+	}
+
+	footer {
+		padding-inline: 5rem;
+	}
 }
